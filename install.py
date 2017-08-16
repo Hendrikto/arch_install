@@ -58,3 +58,12 @@ args = parser.parse_args()
 with open(args.file) as input_file:
     packages = input_file.read()
 packages = [p for p in packages.splitlines() if not p.startswith("#")]
+
+for package_name in packages:
+    package = Package.get_package(package_name)
+    if package is None:
+        continue
+    print(package)
+    choice = input("Install? (Y/n) ")
+    if choice.lower() not in ["", "y", "yes"]:
+        continue
