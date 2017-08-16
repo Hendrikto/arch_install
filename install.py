@@ -45,6 +45,19 @@ class Package():
         ])
 
 
+def prompt(
+    message: str,
+    start: str="::",
+    default: bool=True,
+) -> bool:
+    indicator = "[Y/n]" if default else "[y/N]"
+    choice = input(f"{start} {message} {indicator} ")
+    if not choice:
+        return default
+
+    return choice.lower() in ["y", "yes"]
+
+
 parser = ArgumentParser()
 parser.description = "Interactively install a list of packages."
 parser.add_argument(
@@ -65,8 +78,7 @@ for package_name in packages:
     if package is None:
         continue
     print(package)
-    choice = input(":: Install? [Y/n] ")
-    if choice.lower() in ["", "y", "yes"]:
+    if prompt("Install?"):
         candidates.append(package_name)
 
 if not candidates:
