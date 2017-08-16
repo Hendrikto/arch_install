@@ -83,3 +83,12 @@ for package_name in packages:
 
 if not candidates:
     exit(0)
+
+print(
+    "",
+    " Selected Packages",
+    "╒═════════════════",
+    "├ " + "\n├ ".join(candidates[:-1]),
+    "└ " + candidates[-1],
+    sep="\n",
+)
