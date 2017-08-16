@@ -92,3 +92,6 @@ print(
     "└ " + candidates[-1],
     sep="\n",
 )
+
+if prompt("Install selected packages?", default=False):
+    subprocess.call("yes | sudo pacman -S " + " ".join(candidates), shell=True)
