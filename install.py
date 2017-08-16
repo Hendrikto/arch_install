@@ -61,7 +61,7 @@ def prompt(
 parser = ArgumentParser()
 parser.description = "Interactively install a list of packages."
 parser.add_argument(
-    "-f", "--file",
+    "file", nargs="?",
     type=str, default="packages.txt",
     help="A text file containing newline delimited package names.",
 )
