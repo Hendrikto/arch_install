@@ -2,8 +2,27 @@
 
 # author: Hendrik Werner <hendrik.to@gmail.com>
 
+import re
+import subprocess
+
 
 class Package():
+    @classmethod
+    def get_package(cls, name):
+        try:
+            info = subprocess.check_output(
+                f"pacman -Qi {name}",
+                shell=True,
+            ).decode()
+        except subprocess.CalledProcessError:
+            return
+        return cls(
+            name=name,
+            version=re.search("^Version\s*: (.*)$", info, re.MULTILINE)[1],
+            description=re.search("^Description\s*: (.*)$", info, re.MULTILINE)[1],
+            size=re.search("^Installed Size\s*: (.*)$", info, re.MULTILINE)[1]
+        )
+
     def __init__(
         self,
         name: str,
