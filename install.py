@@ -73,6 +73,7 @@ with open(args.file) as input_file:
 packages = [
     p for p in packages.splitlines()
     if p
+    if not p.isspace()
     if not p.startswith("#")
 ]
 
