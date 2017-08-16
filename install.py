@@ -68,3 +68,6 @@ for package_name in packages:
     choice = input(":: Install? [Y/n] ")
     if choice.lower() in ["", "y", "yes"]:
         candidates.append(package_name)
+
+if not candidates:
+    exit(0)
