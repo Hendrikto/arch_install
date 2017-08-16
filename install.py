@@ -54,3 +54,7 @@ parser.add_argument(
 )
 
 args = parser.parse_args()
+
+with open(args.file) as input_file:
+    packages = input_file.read()
+packages = [p for p in packages.splitlines() if not p.startswith("#")]
