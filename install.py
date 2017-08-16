@@ -70,7 +70,11 @@ args = parser.parse_args()
 
 with open(args.file) as input_file:
     packages = input_file.read()
-packages = [p for p in packages.splitlines() if not p.startswith("#")]
+packages = [
+    p for p in packages.splitlines()
+    if p
+    if not p.startswith("#")
+]
 
 candidates = []
 for package_name in packages:
