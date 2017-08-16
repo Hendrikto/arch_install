@@ -64,6 +64,6 @@ for package_name in packages:
     if package is None:
         continue
     print(package)
-    choice = input("Install? (Y/n) ")
+    choice = input(":: Install? [Y/n] ")
     if choice.lower() not in ["", "y", "yes"]:
         continue
