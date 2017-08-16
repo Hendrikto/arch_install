@@ -4,6 +4,7 @@
 
 import re
 import subprocess
+from argparse import ArgumentParser
 
 
 class Package():
@@ -42,3 +43,14 @@ class Package():
             f"├ size: {self.size}",
             f"└ description: {self.description}",
         ])
+
+
+parser = ArgumentParser()
+parser.description = "Interactively install a list of packages."
+parser.add_argument(
+    "-f", "--file",
+    type=str, default="packages.txt",
+    help="A text file containing newline delimited package names.",
+)
+
+args = parser.parse_args()
