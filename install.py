@@ -70,10 +70,10 @@ args = parser.parse_args()
 
 with open(args.file) as input_file:
     packages = input_file.read()
+packages = [p.strip() for p in packages.splitlines()]
 packages = [
-    p for p in packages.splitlines()
+    p for p in packages
     if p
-    if not p.isspace()
     if not p.startswith("#")
 ]
 
