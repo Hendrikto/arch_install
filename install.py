@@ -82,7 +82,7 @@ for package_name in packages:
     package = Package.get_package(package_name)
     if package is None:
         continue
-    print(package)
+    print(f"\n{package}")
     if prompt("Install?"):
         candidates.append(package_name)
 
