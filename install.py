@@ -3,7 +3,7 @@
 # author: Hendrik Werner <hendrik.to@gmail.com>
 
 import re
-import subprocess
+import subprocess as sp
 from argparse import ArgumentParser
 
 
@@ -11,11 +11,11 @@ class Package():
     @classmethod
     def get_package(cls, name):
         try:
-            info = subprocess.check_output(
+            info = sp.check_output(
                 f"pacman -Qi {name}",
                 shell=True,
             ).decode()
-        except subprocess.CalledProcessError:
+        except sp.CalledProcessError:
             return
         return cls(
             name=name,
@@ -99,4 +99,4 @@ print(
 )
 
 if prompt("Install selected packages?", default=False):
-    subprocess.call("yes | sudo pacman -S " + " ".join(candidates), shell=True)
+    sp.call("yes | sudo pacman -S " + " ".join(candidates), shell=True)
