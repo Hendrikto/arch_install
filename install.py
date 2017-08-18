@@ -11,10 +11,9 @@ class Package():
     @classmethod
     def get_package(cls, name):
         try:
-            info = sp.check_output(
-                f"pacman -Qi {name}",
-                shell=True,
-            ).decode()
+            info = sp.run(
+                ["pacman", "-Qi", name], stdout=sp.PIPE, check=True
+            ).stdout.decode()
         except sp.CalledProcessError:
             return
         return cls(
