@@ -90,12 +90,12 @@ if not candidates:
     exit(0)
 
 print(
-    "",
-    " Selected Packages",
-    "╒═════════════════",
-    "├ " + "\n├ ".join(candidates[:-1]),
-    "└ " + candidates[-1],
-    sep="\n",
+    "\n",
+    " Selected Packages\n",
+    "╒═════════════════\n",
+    "├ " + "\n├ ".join(candidates[:-1]) + "\n" if len(candidates) > 1 else "",
+    "└ ", candidates[-1],
+    sep="",
 )
 
 if prompt("Install selected packages?", default=False):
