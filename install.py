@@ -98,4 +98,4 @@ print(
 )
 
 if prompt("Install selected packages?", default=False):
-    sp.call("yes | sudo pacman -S " + " ".join(candidates), shell=True)
+    sp.run("sudo pacman -S --noconfirm".split() + candidates)
