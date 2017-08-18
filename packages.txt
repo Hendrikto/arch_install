@@ -1,0 +1,31 @@
+################################################################################
+# Packages that make up the base system                                        #
+################################################################################
+
+# Window Manager
+	dmenu
+	i3-wm
+	i3lock
+	i3status
+	# compositor
+	compton
+# File Manager
+	mc
+# File Viewers
+	# image
+	feh
+	# video
+	vlc
+	# pdf
+	#qpdfview
+# Firewall
+	nftables
+# Audio
+	pavucontrol
+	pulseaudio
+	pulseaudio-alsa
+# Video
+	# Nvidia open driver
+	xf86-video-nouveau
+# Terminal
+	xterm
