@@ -1,0 +1,27 @@
+################################################################################
+# Optional packages not required by the base system                            #
+################################################################################
+
+# Theming
+	adobe-source-code-pro-fonts
+	arc-solid-gtk-theme
+	lxappearance-gtk3
+	ttf-dejavu
+	ttf-freefont
+
+# Programming
+	#chruby
+	gcolor2
+	#pycharm-professional
+	#ruby-install
+	#sublime-text-dev
+
+# General
+	#expressvpn
+	#google-chrome
+	lxtask-gtk3
+	maim
+	#trimage
+
+# Misc
+	#factorio
