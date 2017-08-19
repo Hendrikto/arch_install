@@ -5,6 +5,7 @@
 from argparse import ArgumentParser
 from backend.Adapter import Adapter
 from backend.PacmanAdapter import PacmanAdapter
+from backend.YaourtAdapter import YaourtAdapter
 
 
 class Package():
@@ -61,7 +62,7 @@ parser.add_argument(
 parser.add_argument(
     "-b", "--backend",
     type=str, default="pacman",
-    choices=["pacman"],
+    choices=["pacman", "yaourt"],
     help="The package manager to be used as a backend."
 )
 
@@ -69,6 +70,7 @@ args = parser.parse_args()
 
 adapter = {
     "pacman": PacmanAdapter,
+    "yaourt": YaourtAdapter,
 }[args.backend]
 
 with open(args.file) as input_file:
