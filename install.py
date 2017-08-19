@@ -5,23 +5,19 @@
 import re
 import subprocess as sp
 from argparse import ArgumentParser
+from backend.Adapter import Adapter
+from backend.PacmanAdapter import PacmanAdapter
 
 
 class Package():
     @classmethod
-    def get_package(cls, name):
-        try:
-            info = sp.run(
-                ["pacman", "-Qi", name], stdout=sp.PIPE, check=True
-            ).stdout.decode()
-        except sp.CalledProcessError:
-            return
-        return cls(
-            name=name,
-            version=re.search("^Version\s*: (.*)$", info, re.MULTILINE)[1],
-            description=re.search("^Description\s*: (.*)$", info, re.MULTILINE)[1],
-            size=re.search("^Installed Size\s*: (.*)$", info, re.MULTILINE)[1]
-        )
+    def get_package(
+        cls,
+        name: str,
+        adapter: Adapter,
+    ):
+        info = adapter.get_package_info(name)
+        return cls(*info) if info else None
 
     def __init__(
         self,
@@ -73,6 +69,10 @@ parser.add_argument(
 
 args = parser.parse_args()
 
+adapter = {
+    "pacman": PacmanAdapter,
+}[args.backend]
+
 with open(args.file) as input_file:
     packages = input_file.read()
 packages = [p.strip() for p in packages.splitlines()]
@@ -84,7 +84,7 @@ packages = [
 
 candidates = []
 for package_name in packages:
-    package = Package.get_package(package_name)
+    package = Package.get_package(package_name, adapter)
     if package is None:
         continue
     print(f"\n{package}")
@@ -104,4 +104,4 @@ print(
 )
 
 if prompt("Install selected packages?", default=False):
-    sp.run("sudo pacman -S --noconfirm".split() + candidates)
+    adapter.install_packages(candidates)
