@@ -64,6 +64,12 @@ parser.add_argument(
     type=str, default="packages.txt",
     help="A text file containing newline delimited package names.",
 )
+parser.add_argument(
+    "-b", "--backend",
+    type=str, default="pacman",
+    choices=["pacman"],
+    help="The package manager to be used as a backend."
+)
 
 args = parser.parse_args()
 
