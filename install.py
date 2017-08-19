@@ -2,8 +2,6 @@
 
 # author: Hendrik Werner <hendrik.to@gmail.com>
 
-import re
-import subprocess as sp
 from argparse import ArgumentParser
 from backend.Adapter import Adapter
 from backend.PacmanAdapter import PacmanAdapter
