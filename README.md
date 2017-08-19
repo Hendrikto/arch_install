@@ -12,7 +12,8 @@ package1
 ```
 
 ### Rules
-* empty lines are ignored
-* lines containing only whitespace are ignored
-* lines beginning with `#` are ignored
-* all other lines are interpreted as package names
+1. Leading and trailing whitespace is discarded from every line
+2. Lines are discarded if
+	* they are empty
+	* they start with a `#`
+3. Remaining lines are interpreted as package names
