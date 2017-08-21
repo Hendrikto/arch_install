@@ -20,7 +20,7 @@ class YaourtAdapter(Adapter):
             name,
             re.search("^Version\s*: (.*)$", info, re.MULTILINE)[1],
             re.search("^Description\s*: (.*)$", info, re.MULTILINE)[1],
-            re.search("^Installed Size\s*: (.*)$", info, re.MULTILINE)[1],
+            "unknown",
         )
 
     @staticmethod
