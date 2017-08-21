@@ -12,7 +12,7 @@ class PacmanAdapter(Adapter):
     def get_package_info(name: str) -> Optional[tuple]:
         try:
             info = sp.run(
-                ["pacman", "-Qi", name], stdout=sp.PIPE, check=True
+                ["pacman", "-Si", name], stdout=sp.PIPE, check=True
             ).stdout.decode()
         except sp.CalledProcessError:
             return

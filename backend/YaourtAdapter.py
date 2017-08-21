@@ -12,7 +12,7 @@ class YaourtAdapter(Adapter):
     def get_package_info(name: str) -> Optional[tuple]:
         try:
             info = sp.run(
-                ["yaourt", "-Qi", name], stdout=sp.PIPE, check=True
+                ["yaourt", "-Si", name], stdout=sp.PIPE, check=True
             ).stdout.decode()
         except sp.CalledProcessError:
             return
