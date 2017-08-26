@@ -17,7 +17,7 @@
 	# video
 	vlc
 	# pdf
-	#qpdfview
+	qpdfview
 # Firewall
 	nftables
 # Audio

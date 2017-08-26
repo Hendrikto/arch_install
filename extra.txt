@@ -10,18 +10,18 @@
 	ttf-freefont
 
 # Programming
-	#chruby
+	chruby
 	gcolor2
-	#pycharm-professional
-	#ruby-install
-	#sublime-text-dev
+	pycharm-professional
+	ruby-install
+	sublime-text-dev
 
 # General
-	#expressvpn
-	#google-chrome
+	expressvpn
+	google-chrome
 	lxtask-gtk3
 	maim
-	#trimage
+	trimage
 
 # Misc
-	#factorio
+	factorio
