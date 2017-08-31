@@ -12,6 +12,7 @@
 # Programming
 	chruby
 	gcolor2
+	gnu-netcat
 	pycharm-professional
 	ruby-install
 	sublime-text-dev
