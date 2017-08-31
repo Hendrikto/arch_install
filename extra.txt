@@ -12,7 +12,7 @@
 # Programming
 	chruby
 	gcolor2
-	gnu-netcat
+	openbsd-netcat
 	pycharm-professional
 	ruby-install
 	sublime-text-dev
