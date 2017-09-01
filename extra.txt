@@ -19,6 +19,7 @@
 
 # General
 	expressvpn
+	ffmpeg
 	google-chrome
 	lxtask-gtk3
 	maim
