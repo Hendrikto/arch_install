@@ -28,4 +28,5 @@
 	# Nvidia open driver
 	xf86-video-nouveau
 # Terminal
+	openssh
 	xterm
