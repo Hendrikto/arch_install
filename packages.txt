@@ -2,6 +2,10 @@
 # Packages that make up the base system                                        #
 ################################################################################
 
+# Display Server
+	xorg-server
+	xorg-xinit
+	xorg-xrandr
 # Window Manager
 	dmenu
 	i3-wm
