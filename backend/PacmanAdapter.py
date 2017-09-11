@@ -21,6 +21,7 @@ class PacmanAdapter(Adapter):
             re.search("^Version\s*: (.*)$", info, re.MULTILINE)[1],
             re.search("^Description\s*: (.*)$", info, re.MULTILINE)[1],
             re.search("^Installed Size\s*: (.*)$", info, re.MULTILINE)[1],
+            re.search("^Repository\s*: (.*)$", info, re.MULTILINE)[1],
         )
 
     @staticmethod
