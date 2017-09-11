@@ -31,6 +31,8 @@
 # Video
 	# Nvidia open driver
 	xf86-video-nouveau
+	# AMD open driver
+	xf86-video-amdgpu
 # Terminal
 	openssh
 	xterm
