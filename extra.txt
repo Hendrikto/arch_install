@@ -24,6 +24,7 @@
 	lxtask-gtk3
 	maim
 	trimage
+	imagemagick
 
 # Misc
 	libreoffice-fresh
