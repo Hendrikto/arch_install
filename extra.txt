@@ -6,6 +6,7 @@
 	adobe-source-code-pro-fonts
 	arc-solid-gtk-theme
 	lxappearance-gtk3
+	qt5-styleplugins
 	ttf-dejavu
 	ttf-freefont
 
