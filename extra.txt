@@ -27,6 +27,7 @@
 	libreoffice-fresh
 	lxtask-gtk3
 	maim
+	pandoc
 	trimage
 
 # Misc
