@@ -19,6 +19,7 @@
 	sublime-text
 
 # General
+	aria2
 	expressvpn
 	ffmpeg
 	google-chrome
