@@ -22,11 +22,11 @@
 	expressvpn
 	ffmpeg
 	google-chrome
+	libreoffice-fresh
 	lxtask-gtk3
 	maim
 	trimage
 	imagemagick
 
 # Misc
-	libreoffice-fresh
 	factorio
