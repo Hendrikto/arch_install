@@ -16,7 +16,7 @@
 	openbsd-netcat
 	pycharm-professional
 	ruby-install
-	sublime-text-dev
+	sublime-text
 
 # General
 	expressvpn
