@@ -12,6 +12,7 @@
 
 # Programming
 	chruby
+	diff-so-fancy
 	gcolor2
 	openbsd-netcat
 	pycharm-professional
