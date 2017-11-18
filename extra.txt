@@ -23,6 +23,7 @@
 	aria2
 	expressvpn
 	ffmpeg
+	firefox
 	google-chrome
 	imagemagick
 	libreoffice-fresh
