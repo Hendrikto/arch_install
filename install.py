@@ -4,6 +4,7 @@
 
 from argparse import ArgumentParser
 from backend.Adapter import Adapter
+from backend.AuraAdapter import AuraAdapter
 from backend.PacmanAdapter import PacmanAdapter
 from backend.YaourtAdapter import YaourtAdapter
 
@@ -65,13 +66,14 @@ parser.add_argument(
 parser.add_argument(
     "-b", "--backend",
     type=str, default="pacman",
-    choices=["pacman", "yaourt"],
+    choices=["aura", "pacman", "yaourt"],
     help="The package manager to be used as a backend."
 )
 
 args = parser.parse_args()
 
 adapter = {
+    "aura": AuraAdapter,
     "pacman": PacmanAdapter,
     "yaourt": YaourtAdapter,
 }[args.backend]
