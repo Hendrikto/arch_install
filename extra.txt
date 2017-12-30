@@ -21,6 +21,7 @@
 
 # General
 	aria2
+	backlight_control
 	expressvpn
 	ffmpeg
 	firefox
