@@ -31,6 +31,7 @@
 	lxtask-gtk3
 	maim
 	pandoc
+	reflector
 	trimage
 
 # Misc
