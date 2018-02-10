@@ -8,7 +8,7 @@
 	lxappearance-gtk3
 	qt5-styleplugins
 	ttf-dejavu
-	ttf-freefont
+	ttf-symbola
 
 # Programming
 	chruby
