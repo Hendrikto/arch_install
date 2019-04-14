@@ -19,6 +19,9 @@
 	pycharm-professional
 	ruby-install
 	sublime-text
+	# image optimization
+	jpegoptim
+	optipng
 
 # General
 	aria2
