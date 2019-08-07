@@ -37,6 +37,9 @@
 	pandoc
 	reflector
 	trimage
+	# (de)compression
+	rar
+	zip
 
 # Misc
 	factorio
