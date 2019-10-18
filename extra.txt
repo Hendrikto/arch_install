@@ -13,9 +13,9 @@
 # Programming
 	chruby
 	diff-so-fancy
-	docker
 	gcolor2
 	openbsd-netcat
+	podman
 	pycharm-professional
 	ruby-install
 	sublime-text
