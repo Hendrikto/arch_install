@@ -39,6 +39,7 @@
 	trimage
 	# (de)compression
 	rar
+	unzip
 	zip
 
 # Misc
