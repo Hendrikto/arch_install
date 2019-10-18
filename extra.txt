@@ -35,6 +35,7 @@
 	lxtask-gtk3
 	maim
 	pandoc
+	pdfpc
 	reflector
 	trimage
 	# (de)compression
