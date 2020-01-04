@@ -25,6 +25,7 @@
 # Network Stack
 	iwd
 	nftables
+	systemd-resolved
 # Audio
 	pavucontrol
 	pulseaudio
