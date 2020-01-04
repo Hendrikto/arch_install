@@ -22,7 +22,8 @@
 	vlc
 	# pdf
 	qpdfview
-# Firewall
+# Network Stack
+	iwd
 	nftables
 # Audio
 	pavucontrol
