@@ -12,7 +12,7 @@
 	i3lock
 	i3status
 	# compositor
-	compton
+	picom
 # File Manager
 	mc
 # File Viewers
