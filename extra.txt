@@ -26,6 +26,7 @@
 # General
 	aria2
 	backlight_control
+	battery_warning
 	expressvpn
 	ffmpeg
 	firefox
