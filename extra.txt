@@ -40,6 +40,7 @@
 	pdfpc
 	reflector
 	trimage
+	xclip
 	# (de)compression
 	rar
 	unzip
