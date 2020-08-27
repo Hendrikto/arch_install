@@ -9,6 +9,7 @@
 	powerline-fonts
 	qt5-styleplugins
 	ttf-dejavu
+	ttf-font-awesome
 	ttf-symbola
 
 # Programming
