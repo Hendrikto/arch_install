@@ -11,6 +11,7 @@
 	ttf-dejavu
 	ttf-font-awesome
 	ttf-symbola
+	zsh-syntax-highlighting
 
 # Programming
 	chruby
